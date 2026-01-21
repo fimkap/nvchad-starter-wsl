@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "onedark",
+	theme = "chadracula",
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
@@ -15,10 +15,24 @@ M.base46 = {
 }
 
 -- M.nvdash = { load_on_startup = true }
--- M.ui = {
---       tabufline = {
---          lazyload = false
---      }
--- }
+M.ui = {
+  statusline = {
+     theme = "vscode_colored",
+     order = {
+       "mode",
+       "file",
+       "git",
+       "%=",
+       "lsp_msg",
+       "%=",
+       "diagnostics",
+       "lsp",
+       "cwd",
+     },
+  },
+  tabufline = {
+    enabled = false,
+  },
+}
 
 return M
